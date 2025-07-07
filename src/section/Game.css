@@ -1,0 +1,106 @@
+/* Main Container */
+.game-wrapper {
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.game-container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Game Area */
+.game-area {
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.conveyor-track {
+  width: 100%;
+  height: 180px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.conveyor {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  align-items: center;
+  position: absolute;
+  animation: scroll 10s linear infinite;
+}
+
+.beer-can {
+  width: 80px;
+  height: 120px;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.beer-can img {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.beer-can.rotate {
+  transform: rotate(360deg);
+}
+
+/* Buttons */
+.start-btn, .restart-btn {
+  background: #ffcc00;
+  color: black;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: all 0.3s;
+}
+
+.start-btn:hover, .restart-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Game Stats */
+.game-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.game-stats span {
+  color: #ff6600;
+}
+
+/* Result Screen */
+.result-screen h2 span {
+  color: #ff6600;
+  font-size: 1.5em;
+}

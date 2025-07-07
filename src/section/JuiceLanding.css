@@ -1,0 +1,178 @@
+/* JuiceLanding.css */
+.juice-fullscreen-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 5%;
+  transition: background 0.8s ease;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: 50%;
+  z-index: 2;
+}
+
+.juice-text h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.juice-info {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 80%;
+  margin-top: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.nutrients {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.nutrient-tag {
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.photos {
+  display: flex;
+  gap: 30px;
+}
+
+.juice-wrapper {
+  width: 100px;
+  height: 140px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.3s ease;
+}
+
+.static-juice {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
+  transition: all 0.3s ease;
+}
+
+.activePhoto {
+  border-bottom: 3px solid white;
+}
+
+.juice-wheel {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  position: absolute;
+  right: -300px;
+  bottom: -300px;
+  z-index: 1;
+}
+
+.juice-wheel img {
+  width: 350px;
+  position: absolute;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+.dynamic-juice-1 { top: -380px; right: 120px; }
+.dynamic-juice-2 { transform: rotate(90deg); right: -320px; top: 40px; }
+.dynamic-juice-3 { transform: rotate(180deg); bottom: -380px; right: 120px; }
+.dynamic-juice-4 { transform: rotate(-90deg); top: 40px; left: -320px; }
+
+.fruits-wheel {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  top: -650px;
+  left: -500px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.fruits-wheel img {
+  width: 700px;
+  opacity: 0.4;
+  position: absolute;
+  filter: blur(2px);
+}
+
+.dynamic-fruits-1 { transform: rotate(90deg); bottom: -550px; left: 40px; }
+.dynamic-fruits-2 { transform: rotate(180deg); bottom: 220px; left: -620px; }
+.dynamic-fruits-3 { transform: rotate(100deg); top: -380px; left: 120px; }
+.dynamic-fruits-4 { bottom: 150px; right: -650px; }
+
+.bg-bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content {
+    width: 80%;
+  }
+  
+  .juice-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .juice-info {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  .juice-wheel {
+    width: 400px;
+    height: 400px;
+    right: -200px;
+    bottom: -200px;
+  }
+  
+  .juice-wheel img {
+    width: 250px;
+  }
+  
+  .fruits-wheel {
+    width: 500px;
+    height: 500px;
+    top: -400px;
+    left: -300px;
+  }
+  
+  .fruits-wheel img {
+    width: 450px;
+  }
+}
